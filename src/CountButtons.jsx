@@ -1,5 +1,3 @@
-
-
 export default function CountButtons() {
   return (
     <div>

@@ -1,9 +1,15 @@
+import CountButtons from "./CountButtons";
 import ResetButton from "./ResetButton";
+import Title from "./Title";
+import Count from "./Count";
 
 export default function Card() {
   return (
     <div>
-        <ResetButton />
+      <Title />
+      <Count />
+      <ResetButton />
+      <CountButtons />
     </div>
   )
 }
