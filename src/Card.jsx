@@ -1,4 +1,4 @@
-import CountButtons from "./CountButtons";
+import ButtonContainer from "./ButtonContainer";
 import ResetButton from "./ResetButton";
 import Title from "./Title";
 import Count from "./Count";
@@ -13,7 +13,7 @@ export default function Card() {
       <Title />
       <Count count={count} />
       <ResetButton setCount={setCount} />
-      <CountButtons setCount={setCount} />
+      <ButtonContainer setCount={setCount} />
     </div>
   )
 }
