@@ -2,6 +2,7 @@ import ButtonContainer from "./ButtonContainer";
 import ResetButton from "./ResetButton";
 import Title from "./Title";
 import Count from "./Count";
+import CountButton from "./CountButton";
 import './index.css';
 import { useEffect, useState } from "react";
 
@@ -25,13 +26,16 @@ export default function Card() {
       return () => window.removeEventListener("keydown", handleKeyDown);
 
   }, [count]);
-
+//<!-- setCount={setCount} locked={locked} -->
   return (
     <div className={`card ${locked ? "card--limit" : ""}`}>
       <Title locked={locked} />
       <Count count={count} />
       <ResetButton setCount={setCount} />
-      <ButtonContainer setCount={setCount} locked={locked} />
+      <ButtonContainer> 
+        <CountButton type={"minus"} setCount={setCount} locked={locked}/>
+        <CountButton type={"plus"} setCount={setCount} locked={locked}/>
+      </ButtonContainer>
     </div>
   )
 }
